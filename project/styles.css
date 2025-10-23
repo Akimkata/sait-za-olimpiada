@@ -1,0 +1,155 @@
+/* ===========================
+   Code Academy България - styles.css
+   Описание: Основни стилове за целия сайт
+   Използва се от всички HTML файлове
+   =========================== */
+
+/* Променливи */
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --success: #4CAF50;
+  --error: #f44336;
+  --primary:#0066cc; /* синьо */
+  --accent:#ff6b6b; /* червено-розово */
+  --muted:#6b7280;
+  --success:#16a34a;
+  --glass: rgba(255,255,255,0.6);
+  
+  --radius-sm:8px;
+  --radius-md:14px;
+  --gap:1rem;
+  
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Основни стилове */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--font-system);
+  background:linear-gradient(180deg,var(--bg),#eef2ff);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+
+/* Оформление */
+.header{
+  background:var(--card);
+  box-shadow:0 2px 8px rgba(2,6,23,0.06);
+  position:sticky;top:0;z-index:30;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem}
+.brand{display:flex;align-items:center;gap:0.75rem;font-weight:700;color:var(--primary)}
+.brand .logo{font-size:1.25rem}
+.nav{display:flex;gap:0.5rem}
+.nav a{padding:0.5rem 0.75rem;border-radius:8px;color:inherit;text-decoration:none}
+.nav a:hover{background:var(--bg);color:var(--primary)}
+.skip-link{position:absolute;left:8px;top:-40px;background:var(--primary);color:#fff;padding:0.5rem;border-radius:6px}
+.skip-link:focus{top:8px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--primary),#4f46e5);color:#fff;padding:2.5rem 1rem;border-radius:var(--radius-md);margin-top:1rem}
+.hero h1{font-size:clamp(1.5rem,2.5vw,2.5rem);margin:0 0 0.5rem}
+.hero p{max-width:70ch;margin:0 auto 1rem;color:rgba(255,255,255,0.9)}
+.hero .courses{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:0.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:600;transition:transform 180ms,var(--transition);box-shadow:0 6px 18px rgba(79,70,229,0.12)}
+.btn:hover{transform:translateY(-3px);background:#145db8}
+.btn.secondary{background:transparent;color:var(--primary);border:2px solid rgba(0,102,204,0.12)}
+
+/* Cards / Courses */
+.grid{display:grid;gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:var(--radius-md);box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+.course-card{display:flex;flex-direction:column;gap:0.5rem}
+.course-card .icon{font-size:1.5rem}
+.badge{display:inline-block;background:#eef2ff;color:var(--primary);padding:0.25rem 0.5rem;border-radius:8px;font-weight:600}
+.card .meta{display:flex;justify-content:space-between;align-items:center}
+
+/* Code block */
+.code-block{background:#0f172a;color:#e6eef8;padding:0.75rem;border-radius:10px;font-family:SFMono-Regular,Monaco,Consolas,monospace;font-size:0.95rem;overflow:auto}
+.code-block pre{margin:0}
+.code-comment{color:#9ca3af}
+
+/* Footer */
+.footer{margin-top:2rem;padding:1rem 0;background:linear-gradient(180deg,transparent,#ffffff);}
+.footer-inner{display:flex;flex-direction:column;gap:1rem;align-items:center}
+.socials{display:flex;gap:0.5rem}
+.socials a{background:#111827;color:#fff;padding:0.45rem;border-radius:8px;text-decoration:none}
+
+/* Отзивчив дизайн */
+@media(min-width:700px){
+  .nav{gap:0.75rem}
+  .grid.courses{grid-template-columns:repeat(3,1fr)}
+  .hero{padding:3rem}
+}
+
+@media(min-width:1000px){
+  .header-inner{padding:1rem 2rem}
+  .grid.courses{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Utilities */
+.flex{display:flex}
+.center{display:flex;align-items:center;justify-content:center}
+.mt-1{margin-top:1rem}
+.mb-1{margin-bottom:1rem}
+
+/* Print adjustments */
+@media print{
+  .header,.footer{display:none}
+  body{background:#fff;color:#000}
+  .code-block{background:#f3f4f6;color:#000}
+}
+
+/* Стилове за упражненията */
+.exercise-container {
+    background-color: var(--card);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.exercise-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.exercise-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.check-button, .reset-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.check-button {
+    background-color: var(--success);
+    color: white;
+}
+
+.reset-button {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.exercise-result {
+    margin-top: 10px;
+    font-weight: bold;
+    min-height: 24px;
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="bg">
+<!--
+  index.html - Начална страница
+  Описание: Приветствие, кратко описание и бутоните за всеки курс
+  Използва: styles.css
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Code Academy България - Научи програмиране</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Прескочи към съдържанието</a>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">💻 Code Academy BG</div>
+        <div class="tag">За млади програмисти</div>
+      </div>
+      <nav class="nav" aria-label="Главно меню">
+        <a href="index.html">Начало</a>
+        <a href="courses.html">Курсове</a>
+        <a href="about.html">За нас</a>
+        <a href="#contacts">Контакти</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <h1>Научи програмиране от нулата</h1>
+      <p>Code Academy България предлага ясни и практични курсове за ученици и начинаещи. Научи основите и прави първите си проекти.</p>
+      <div class="courses mt-1">
+        <a class="btn" href="courses.html">Виж всички курсове</a>
+        <a class="btn secondary" href="courses.html">Започни с курс</a>
+      </div>
+    </section>
+
+    <section class="mt-1">
+      <h2>Популярни курсове</h2>
+      <div class="grid courses mt-1">
+        <article class="card course-card">
+          <div class="icon">🐍</div>
+          <h3>Python</h3>
+          <p>Лесен за начало език, много подходящ за алгоритми и състезания.</p>
+          <div class="meta"><span class="badge">Ниво: Начинаещ</span><a class="btn" href="python.html">Виж курса</a></div>
+        </article>
+
+        <article class="card course-card">
+          <div class="icon">☕</div>
+          <h3>Java</h3>
+          <p>Структуриран език, популярен в училищата и състезанията.</p>
+          <div class="meta"><span class="badge">Ниво: Средно</span><a class="btn" href="java.html">Виж курса</a></div>
+        </article>
+
+        <article class="card course-card">
+          <div class="icon">#️⃣</div>
+          <h3>C#</h3>
+          <p>Добър за разработка на приложения и игри.</p>
+          <div class="meta"><span class="badge">Ниво: Средно</span><a class="btn" href="csharp.html">Виж курса</a></div>
+        </article>
+
+        <article class="card course-card">
+          <div class="icon">➕</div>
+          <h3>C++</h3>
+          <p>Мощен и бърз език, често използван в олимпиади по информатика.</p>
+          <div class="meta"><span class="badge">Ниво: Напреднали</span><a class="btn" href="cpp.html">Виж курса</a></div>
+        </article>
+
+        <article class="card course-card">
+          <div class="icon">🟨</div>
+          <h3>JavaScript</h3>
+          <p>Език за уеб — динамични страници и интерактивни проекти.</p>
+          <div class="meta"><span class="badge">Ниво: Начинаещ</span><a class="btn" href="javascript.html">Виж курса</a></div>
+        </article>
+
+        <article class="card course-card">
+          <div class="icon">🌐</div>
+          <h3>HTML & CSS</h3>
+          <p>Основи на уеба — структуриране и стил на страници.</p>
+          <div class="meta"><span class="badge">Ниво: Начинаещ</span><a class="btn" href="html-css.html">Виж курса</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="mt-1 card">
+      <h2>Защо да учиш с нас?</h2>
+      <ul>
+        <li>Практически примери и разбираеми обяснения</li>
+        <li>Подготовка за училищни и състезателни задачи</li>
+        <li>Учебни материали, подходящи за ученици</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© 2025 Code Academy България</div>
+      <div class="socials">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
